@@ -1,8 +1,6 @@
-module github.com/trainwithshubham/skillpulse
+# install Go first if not present
+sudo apt install golang-go -y
 
-go 1.26
-
-require (
-	github.com/gin-gonic/gin v1.9.1
-	github.com/go-sql-driver/mysql v1.8.1
-)
+# upgrade the vulnerable dependency
+go get golang.org/x/crypto@v0.31.0
+go mod tidy
