@@ -1,6 +1,8 @@
-# install Go first if not present
-sudo apt install golang-go -y
+module github.com/trainwithshubham/skillpulse
 
-# upgrade the vulnerable dependency
-go get golang.org/x/crypto@v0.31.0
-go mod tidy
+go 1.21
+
+require (
+	github.com/gin-gonic/gin v1.9.1
+	github.com/go-sql-driver/mysql v1.7.1
+)
